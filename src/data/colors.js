@@ -1,0 +1,27 @@
+const colors = {
+  theme: '#294C6F',
+  'theme-dark': '#121212',
+  grey: '#F4F5F8',
+  'dark-grey': '#1f1f1f',
+  'light-grey': '#2d2d2d',
+  'lighter-grey': '#353535',
+  'even-lighter-grey': '#4a4a4a',
+  'off-white': '#f5f5f5',
+  dash: '#efefef',
+  sec: '#FF5B7E',
+  tomato: '#c61932',
+  'tomato-shade': '#cc8791',
+  txt: '#454545',
+  'txt-fade': '#787878',
+  'txt-lt': '#e7e7e7',
+  'txt-lt-fd': '#eee',
+  'txt-t': '#777',
+  lite: '#f7f7f7',
+  bl3: 'rgba(0,0,0,0.3)',
+  inherit: 'inherit',
+  shade: '#fafafa',
+  completed: '#31f558',
+  pending: '#f6c330',
+};
+
+module.exports = colors;

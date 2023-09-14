@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+  min-height: 100vh;
+  width: 100%;
+  color: #333;
+}
+
+/** General styles */
+
+body {
+  @apply bg-white dark:bg-theme-dark;
+
+  &::before {
+    background: rgba(#000, 0.3);
+    content: '';
+    height: 150vh;
+    width: 100vw;
+    transition: opacity 0.1s ease;
+
+    @apply left-0 opacity-0 top-0 fixed invisible;
+  }
+
+  &.over-lay {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      z-index: 49;
+    }
+  }
+}
+
+.container {
+  @apply px-3.5 mx-auto;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+button {
+  outline: none !important;
+}
+
+.clipped-text {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--number);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  hyphens: auto;
+}
+
+.why-us_card {
+  transition: 0.3s ease;
+
+  @screen lg {
+    &:hover {
+      box-shadow: -120px 80px 100px rgba(41, 76, 110, 0.08);
+      transform: translateY(-35px);
+
+      a {
+        transition: 0.3s ease;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.text-regular {
+  @apply text-txt dark:text-white;
+}
+
+@media screen and (max-width: 1350px) {
+  // transform: unset;
+}
+
+@media screen and (max-width: 599px) {
+  .rdrDefinedRangesWrapper {
+    display: none;
+  }
+
+  .rdrMonth {
+    width: unset;
+  }
+}
+
+.react-simple-star-rating .filled-icons {
+  display: inline-block !important;
+}
+
+.react-simple-star-rating .empty-icons {
+  display: flex !important;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(#{'min(300px, 100%)'}, 1fr));
+  grid-gap: 30px;
+}
